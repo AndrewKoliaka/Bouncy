@@ -1,0 +1,23 @@
+%reset_link {
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+@function strip-units($number) {
+    @return $number / ($number * 0 + 1);
+}
+
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
