@@ -1,5 +1,3 @@
-
-
 @mixin respond-to($media) {
     @if $media == wide {
         @media only screen and (min-width: $small) {
@@ -21,14 +19,6 @@
     }
 }
 
-@mixin line-height($font, $line) {
-    line-height: $line * 1 / $font;
-}
-
-@mixin height($font, $height) {
-    height: $height * 1em / $font;
-}
-
 @mixin placeholder {
     &:-moz-placeholder {
         @content;
@@ -44,27 +34,6 @@
     }
 }
 
-@mixin col($width, $cols, $padding: 15) {
-    flex-basis: $width * 100% / $cols;
-    max-width: $width * 100% / $cols;
-    padding-left: $padding + px;
-    padding-right: $padding + px;
-    flex-shrink: 0;
-    flex-grow: 0;
-
+@mixin bg-image($imageName) {
+    background: url('../img/#{$imageName}') no-repeat center/cover;
 }
-
-@mixin sprite-center($sprite) {
-    top: 50%;
-    left: 50%;
-    margin-left: -(nth($sprite, 5)) / 2;
-    margin-top: -(nth($sprite, 6)) / 2;
-    @include sprite($sprite);
-}
-
-@mixin sprite-center-top($sprite) {
-    top: 50%;
-    margin-top: -(nth($sprite, 6)) / 2;
-    @include sprite($sprite);
-}
-

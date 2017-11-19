@@ -1,0 +1,60 @@
+.header {
+    padding-top: 39px;
+    padding-bottom: 75px;
+    @include bg-image('bg_1.jpg');
+    text-align: center;
+    
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__link {
+        padding: 8px 20px;
+        border-radius: 17px;
+        border: 1px solid transparent;
+        font-size: 1rem;
+        color: #fff;
+        transition: $tr3s;
+
+        &:hover {
+            border-color: #fff;
+        }
+    }
+
+    &__title {
+        margin-top: 220px;
+    }
+
+    &__text {
+        margin-top: 35px;
+        color:  #fff;
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+    &__scroll-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        margin-top: 220px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+        background-color: $accent-color;
+        transition: $tr3s;
+
+        &:hover {
+            background-color: darken($accent-color, 5%);
+        }
+    }
+
+    &__scroll-icon {
+        fill: #fff;
+        width: 20px;
+        height: 20px;
+    }
+}

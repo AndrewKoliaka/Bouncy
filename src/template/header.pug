@@ -1,11 +1,38 @@
+include ../mixins/icon
+
 doctype html
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title IOS Landing
+        title Bouncy
 
         link(href="css/style.css" rel="stylesheet")
     body
-        | hello world
+        header.header.section
+            .section__container
+                nav.header__nav
+                    a(href="#").header__logo
+                        img(src="img/logo.png", alt="bouncy")
+                    ul.header__list
+                        li.header__item
+                            a(href="#").header__link Hello
+                        li.header__item
+                            a(href="#").header__link About
+                        li.header__item
+                            a(href="#").header__link Services
+                        li.header__item
+                            a(href="#").header__link Portfolio
+                        li.header__item
+                            a(href="#").header__link Team
+                        li.header__item
+                            a(href="#").header__link Blog
+                        li.header__item
+                            a(href="#").header__link Contact
+                h1.header__title We are code cafe
+                p.header__text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae autem modi eaque 
+                    br
+                    | suscipit saepe repudiandae?
+                a(href="#about-section").header__scroll-btn
+                    +icon('angle-down').header__scroll-icon

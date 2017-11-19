@@ -1,0 +1,39 @@
+.section {
+
+    &__container {
+        @include grid-container;
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+
+    &__row {
+        @include grid-collapse;
+    }
+
+    &__title {
+        font-family: $ffSourceSansPro-Light;
+        color: $heading-color;
+        font-size: 1.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: .25rem;
+    }
+
+    &__text {
+        color: $text-color;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 1.78;
+
+        &--bold {
+            font-family: $ffOpenSans-Bold;
+            color:  #636871;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        &--green {
+            color: $accent-color;
+        }
+    }
+}

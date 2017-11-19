@@ -1,0 +1,21 @@
+.circle-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 53px;
+    height: 53px;
+    cursor: pointer;
+    background-color: #81868e;
+    border-radius: 50%;
+    transition: $tr3s;
+
+    .icon {
+        fill: #fff;
+        width: 30px;
+        height: 30px;
+    }
+
+    &:hover {
+        background-color: $accent-color;
+    }
+}
