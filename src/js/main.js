@@ -1,8 +1,19 @@
 //= ../../node_modules/jquery/dist/jquery.min.js
 //= ../../node_modules/slick-carousel/slick/slick.min.js
+//= ../../node_modules/scrollreveal/dist/scrollreveal.min.js
 
 $(document)
     .ready(function () {
+
+        // fade in effect on scrolling
+        window.sr = ScrollReveal({
+            delay: 300,
+            mobile: false
+        });
+
+        sr.reveal('.section__container');
+
+        // sliders
         var detailsSlider = $('.details__slider'),
             detailsControls = $('.details__control');
 
