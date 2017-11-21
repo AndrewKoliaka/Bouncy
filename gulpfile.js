@@ -34,7 +34,7 @@ var path = {
     },
     src: {
         pug: 'src/*.pug',
-        js: ['src/js/*.js'],
+        js: ['src/js/main.js'],
         style: 'src/sass/style.scss',
         sprite_scss: 'src/sass/utils/',
         img: 'src/img/**/*.*',
@@ -62,7 +62,7 @@ gulp.task('webserver', function () {
 });
 
 gulp.task('del', function (cb) {
-    del(['/public', '/prod']);
+    del(['./public', './prod']);
 });
 
 gulp.task('pug:build', function () {

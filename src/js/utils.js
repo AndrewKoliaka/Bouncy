@@ -13,19 +13,24 @@ app.utils = (function () {
 
             return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
         },
-        counterUp: function(elements) {
-            for(var i = 0; i < elements.length; i++) {
-                
-                if(!$(elements[i]).data('isLoaded')) {
-                    $(elements[i]).counterUp({
-                        time: 800,
-                        offset: 200
-                    });
+        counterUp: function (elements) {
+            $(elements).each(function(index, el) {
+                var target = $(el);
 
-                    $(elements[i]).data('isLoaded', true)
+                if(!target.data('isLoaded')) {
+                    target.counterUp({time: 800, offset: 200});
+                    target.data('isLoaded', true)
                 }
+            });
+        },
+        makePaginatorActive: function (paginators, index) {
+            var activeModifier = 'paginator--active';
 
-            }
+            paginators.removeClass(activeModifier);
+            $(paginators.get(index)).addClass(activeModifier);
+        },
+        startAnimation: function (element) {
+            $(element).css('animation-play-state', 'running');
         }
     }
 })();

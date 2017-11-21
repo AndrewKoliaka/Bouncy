@@ -7,12 +7,10 @@
 var app = {};
 
 //= utils.js
-//= sliders.js
+//= sliders/details.js
+//= sliders/services.js
 
-$(document)
-    .ready(function () {
-
-        var progressNumbers = $('.radial-progress__percent')
+$(document).ready(function () {
 
         // fade in effect on scrolling
         var sr = ScrollReveal({
@@ -20,31 +18,13 @@ $(document)
             mobile: false
         });
 
-        app.sliders.init();
-
         sr.reveal('.section__container');
+        sr.reveal('.projects');
 
-        $(document).on('scroll', function() {
+        app.detailsSlider.init();
+        app.servicesSlider.init();
 
-
-            if(app.utils.isScrolledIntoView('.services__slider')) {
-
-                $('.radial-progress__percent').text(function() {
-                    return $(this).data('value');
-                });
-
-                var activeSlide = $('.services__slide.slick-active');
-                var percents = activeSlide.find('.radial-progress__percent');
-                var fills = activeSlide.find('.radial-progress__fill');
-
-                for(var i = 0; i < fills.length; i++) {
-                    $(fills[i]).css('animation-play-state', 'running');
-                }
-
-                app.utils.counterUp(percents);
-            }
-        });
-
+        // smooth transition effect between sections after click on link
         $("a").on('click', function (event) {
             if (this.hash !== "") {
                 event.preventDefault();

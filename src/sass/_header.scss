@@ -1,7 +1,7 @@
 .header {
     padding-top: 39px;
     padding-bottom: 75px;
-    @include bg-image('bg_1.jpg');
+    background: url('../img/bg_1.jpg') no-repeat center/cover;
     text-align: center;
     
     &__nav {

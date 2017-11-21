@@ -34,10 +34,6 @@
     }
 }
 
-@mixin bg-image($imageName) {
-    background: url('../img/#{$imageName}') no-repeat center/cover;
-}
-
 @mixin center-absolute($width, $height) {
     position: absolute;
     left: 0;
