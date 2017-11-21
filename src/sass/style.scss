@@ -1,17 +1,24 @@
+// vendors
 @import "../../node_modules/normalize.css/normalize";
 @import "../../node_modules/slick-carousel/slick/slick.scss";
 @import "../../node_modules/bourbon-neat/core/neat";
 
+// utils
 @import "utils/variables";
 @import "utils/mixins";
 @import "utils/helpers";
 @import "utils/fonts";
 
+// reusable blocks
 @import "blocks/section";
 @import "blocks/btn";
-@import "blocks/circle-btn";
+@import "blocks/paginator";
+@import "blocks/radial-progress";
 
+// sections
 @import "main";
 @import "header";
 @import "about";
 @import "details";
+@import "projects";
+@import "services";

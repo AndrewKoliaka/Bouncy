@@ -4,20 +4,17 @@
     border: none;
 }
 
-@function strip-units($number) {
-    @return $number / ($number * 0 + 1);
-}
-
 .clearfix:after {
     content: '';
     display: table;
     clear: both;
 }
 
-.left {
-    float: left;
+.visually-hidden {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
 }
 
-.right {
-    float: right;
-}

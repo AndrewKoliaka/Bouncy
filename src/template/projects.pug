@@ -1,0 +1,18 @@
+include ../mixins/section-header
+
+- var projectCategories = ['Retro', 'Vintage', 'Branding']
+
+section.section.projects
+    +section-header('FEATURED PROJECTS')
+    .projects__container
+        - for(var i = 0; i < 3; i++)
+            a(href="#").projects__project
+                .projects__overlay
+                    .projects__category= projectCategories[i]
+    .projects__footer
+        .section__container
+            .projects__footer-wrapper
+                p.section__text.section__text--big.section__text--white At vero eos et 
+                    b.section__text--bold accusamus 
+                    | et iusto odio dignissimos ducimus qui blanditiis
+                a(href="#").btn.btn--invert.btn--green-hover.projects__submit Submit Now

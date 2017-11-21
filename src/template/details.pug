@@ -1,35 +1,30 @@
-include ../mixins/icon
+include ../mixins/section-header
+include ../mixins/paginator
 
 section.section.details
     .section__container
-        h2.section__title.details__title DetailS ABOUT BOUNCY
-        p.section__text.details__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis deserunt
-            br
-            |accusamus totam veniam!
-        .details__controls-container
-            .details__control.details__control--active
-                +icon('heart')
-            .details__control
-                +icon('mouse')
-            .details__control
-                +icon('light-bulb')
+        +section-header('DetailS ABOUT BOUNCY')
+        ul.details__paginations
+            +paginator('heart', true).details__paginator
+            +paginator('mouse').details__paginator
+            +paginator('light-bulb').details__paginator
         .details__slider
             //- slide 1
             .details__slide
                 .details__slide-title Creative Ideas
                 .details__left-container
                     p.section__text.details__text At 
-                        b.section__text.section__text--bold.section__text--green vero 
+                        b.section__text--bold.section__text--green vero 
                         | eos et accusamus et iusto odio dignissimos 
-                        b.section__text.section__text--bold ducimus 
-                        |qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
+                        b.section__text--bold.section__text--dark ducimus 
+                        | qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores
                 .details__right-container
-                    p.section__text.details__text.details__text--small At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque 
-                        b.section__text.section__text--bold corrupti quos 
+                    p.section__text.section__text--small.details__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque 
+                        b.section__text--bold.section__text--dark corrupti quos 
                         | dolores et quas molestias 
-                        b.section__text.section__text--bold.section__text--green excepturi 
+                        b.section__text--bold.section__text--green excepturi 
                         | sint occaecati cupiditate non provident, 
-                        b.section__text.section__text--bold.section__text--green similique 
+                        b.section__text--bold.section__text--green similique 
                         | sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem r
             
             //- slide 2
@@ -37,24 +32,24 @@ section.section.details
                 .details__slide-title Excellent Works
                 .details__left-container
                     p.section__text.details__text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit voluptatem rem similique minima aliquam neque nemo assumenda 
-                        b.section__text.section__text--bold.section__text--green amet 
+                        b.section__text--bold.section__text--green amet 
                         | temporibus reiciendis?
                 .details__right-container
-                    p.section__text.details__text.details__text--small Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam 
-                        b.section__text.section__text--bold aperiam 
+                    p.section__text.section__text--small.details__text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam 
+                        b.section__text--bold.section__text--dark aperiam 
                         | quam harum minima corporis doloribus voluptatibus quisquam rerum quasi quidem 
-                        b.section__text.section__text--bold.section__text--green deleniti 
+                        b.section__text--bold.section__text--green deleniti 
                         | fugiat optio consequatur ducimus cum quo fuga, corrupti laborum ut! Voluptas quas sint quam mollitia quis reprehenderit quidem dicta?
             //- slide 3
             .details__slide
                 .details__slide-title Good Mood
                 .details__left-container
-                    p.section__text.details__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo deserunt corrupti deleniti rerum eveniet,
-                        b.section__text.section__text--bold maxime 
+                    p.section__text.details__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo deserunt corrupti deleniti rerum eveniet, 
+                        b.section__text--bold.section__text--dark maxime 
                         | saepe voluptatum. Quo totam repudiandae 
-                        b.section__text.section__text--bold.section__text--green dolore 
+                        b.section__text--bold.section__text--green dolore 
                         | voluptate magni!
                 .details__right-container
-                    p.section__text.details__text.details__text--small Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ipsa totam dolorum provident! Pariatur illo facilis dolor 
-                        b.section__text.section__text--bold possimus. 
+                    p.section__text.section__text--small.details__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ipsa totam dolorum provident! Pariatur illo facilis dolor 
+                        b.section__text--bold.section__text--dark possimus. 
                         | Ea maxime ab debitis quasi culpa dolor error modi numquam eaque dignissimos incidunt expedita illo quam delectus, quia tenetur atque quaerat, neque reiciendis, ullam quos. Hic eaque est quas voluptatem placeat earum.

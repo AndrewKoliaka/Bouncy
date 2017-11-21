@@ -1,0 +1,5 @@
+include icon
+
+mixin paginator(iconId, isActive)
+    li.paginator(class=isActive ? "paginator--active" : "")&attributes(attributes)
+        +icon(iconId).paginator__icon

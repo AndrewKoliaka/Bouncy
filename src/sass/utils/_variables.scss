@@ -15,12 +15,13 @@ $ffSourceSansPro-Black: 'Source Sans Pro Black', sans-serif;
 $accent-color: #19bd9a;
 $text-color: #81868e;
 $heading-color: #333b46;
+$gray-bg-color: #f3f3f3;
 
 // Effects
 $tr3s: ease all 0.3s;
 
 // Grid
 $neat-grid: (
-    columns: 12,
-    gutter: 30px,
+    columns: 18,
+    gutter: 0px,
 );

@@ -1,0 +1,142 @@
+$_progress-size: 116px;
+$_progress-padding: 4.5px;
+$_fill-color: $accent-color;
+$_duration: .6s;
+$_delay: .2s;
+
+// convert percent to degree corresponding to proportion
+@function _percentToDegree($percent) {
+    $base: 180deg;
+    @return ($base * $percent) / 50;
+}
+
+// calculate animation duration based on percent of fill area
+@function _calcDuration($percent) {
+    @return ($_duration * $percent) / 50;
+}
+
+.radial-progress {
+    display: inline-block;
+
+    &__area {
+        position: relative;
+        width: $_progress-size;
+        height: $_progress-size;
+        margin: 0 auto;
+        border-radius: 50%;
+    }
+
+    &__mask {
+        position: absolute;
+        height: $_progress-size;
+        width: $_progress-size;
+        background-color: #047378;
+        border-radius: 50%;
+        overflow: hidden;
+    
+        &--left {
+            .radial-progress__fill {
+                background-color: $_fill-color;
+                clip: rect(0, $_progress-size , $_progress-size, $_progress-size / 2);
+                animation-delay: $_delay;
+                animation-timing-function: ease-in;
+            }
+        }
+
+        &--right {
+            clip: rect(0, $_progress-size, $_progress-size , $_progress-size / 2);
+
+            .radial-progress__fill {
+                background-color: $_fill-color;
+                clip: rect(0, $_progress-size / 2, $_progress-size, 0);
+                animation-delay: $_duration + $_delay;
+                animation-timing-function: ease-out;    
+            }
+        }
+    }
+
+    &__fill {
+        position: absolute;
+        width: $_progress-size;
+        height: $_progress-size;
+        border-radius: 50%;
+        animation-fill-mode: forwards;
+        animation-play-state: paused;
+
+        &--50 {
+            animation-name: fill-50;
+            animation-duration: _calcDuration(50);
+        }
+
+        &--30 {
+            animation-name: fill-30;
+            animation-duration: _calcDuration(30);
+        }
+
+        &--25 {
+            animation-name: fill-25;
+            animation-duration: _calcDuration(25);
+        }
+
+        &--10 {
+            animation-name: fill-10;
+            animation-duration: _calcDuration(10);
+        }
+    }
+
+    &__shape {
+        position: absolute;
+        top: 5px;
+        left: 4.5px;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $_progress-size - ($_progress-padding * 2);
+        height: $_progress-size - ($_progress-padding * 2);
+        background-color: #f3f3f3;
+        border-radius: 50%;
+        color:  #81868e;
+    }
+
+    &__percent {
+        font-size: 1.563rem;
+    }
+
+    &__symbol {
+        font-size: .875rem;
+    }
+
+    &__title {
+        margin-top: 25px;
+        text-align: center;
+        font-family: $ffRoboto-Light;
+        font-weight: 300;
+        font-size: 1rem;
+        color:  #81868e;
+    }
+}
+
+@keyframes fill-50 {
+    100% {
+        transform: rotate(-180deg);
+    }
+}
+
+@keyframes fill-30 {
+    100% {
+        transform: rotate(- _percentToDegree(30));
+    }
+}
+
+@keyframes fill-25 {
+    100% {
+        transform: rotate(- _percentToDegree(25));
+    }
+}
+
+@keyframes fill-10 {
+    100% {
+        transform: rotate(- _percentToDegree(10));
+    }
+}

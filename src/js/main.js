@@ -1,44 +1,48 @@
 //= ../../node_modules/jquery/dist/jquery.min.js
 //= ../../node_modules/slick-carousel/slick/slick.min.js
 //= ../../node_modules/scrollreveal/dist/scrollreveal.min.js
+//= ../../node_modules/waypoints/lib/jquery.waypoints.min.js
+//= ../../node_modules/jquery.counterup/jquery.counterup.min.js
+
+var app = {};
+
+//= utils.js
+//= sliders.js
 
 $(document)
     .ready(function () {
 
+        var progressNumbers = $('.radial-progress__percent')
+
         // fade in effect on scrolling
-        window.sr = ScrollReveal({
+        var sr = ScrollReveal({
             delay: 300,
             mobile: false
         });
 
+        app.sliders.init();
+
         sr.reveal('.section__container');
 
-        // sliders
-        var detailsSlider = $('.details__slider'),
-            detailsControls = $('.details__control');
+        $(document).on('scroll', function() {
 
-        function makeControlActive(controls, index, modifier) {
-            controls.removeClass(modifier);
-            $(controls.get(index)).addClass(modifier);
-        }
 
-        detailsSlider.slick({
-            fade: true,
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 5000,
-            speed: 500,
-        });
+            if(app.utils.isScrolledIntoView('.services__slider')) {
 
-        detailsControls.click(function(event) {
-            var slideIndex = $(event.currentTarget).index();
-            detailsSlider.slick('slickGoTo', slideIndex);
-            makeControlActive(detailsControls, slideIndex, 'details__control--active');
-        });
+                $('.radial-progress__percent').text(function() {
+                    return $(this).data('value');
+                });
 
-        detailsSlider.on('beforeChange', function(event, slick) {
-            var nextSlideIndex = slick.currentSlide === 2 ? 0 : slick.currentSlide + 1;
-            makeControlActive(detailsControls, nextSlideIndex, 'details__control--active');
+                var activeSlide = $('.services__slide.slick-active');
+                var percents = activeSlide.find('.radial-progress__percent');
+                var fills = activeSlide.find('.radial-progress__fill');
+
+                for(var i = 0; i < fills.length; i++) {
+                    $(fills[i]).css('animation-play-state', 'running');
+                }
+
+                app.utils.counterUp(percents);
+            }
         });
 
         $("a").on('click', function (event) {

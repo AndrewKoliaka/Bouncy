@@ -1,0 +1,61 @@
+.services {
+    padding-top: 80px;
+    padding-bottom: 135px;
+    text-align: center;
+    background-color: $gray-bg-color;
+
+
+    &__wrapper {
+        margin-top: 60px;
+    }
+
+    &__paginations {
+        @include grid-shift(1);
+        @include grid-column(1);
+        padding-left: 5px;
+    }
+
+    &__paginator {
+        margin-bottom: 17px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__slider {
+        @include grid-shift(1);
+        @include grid-column(16);
+        padding-left: 40px;
+    }
+
+    &__slide {
+        @include grid-collapse;
+        text-align: left;
+    }
+
+    &__left-container {
+        @include grid-column(7);
+        padding-right: 20px;
+    }
+
+    &__right-container {
+        @include grid-shift(1);
+        @include grid-column(9);
+        text-align: right;
+    }
+
+    &__slide-title {
+        margin-bottom: 25px;
+        color:  #464646;
+        font-size: 1.25rem;
+    }
+
+    &__text {
+        margin-top: 30px;
+    }
+
+    &__progress:nth-of-type(2) {
+        margin: 0 43px;
+    }
+}

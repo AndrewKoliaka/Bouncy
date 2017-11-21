@@ -11,4 +11,25 @@
         color: #fff;
         background-color: #333b46;
     }
+
+    &--invert {
+        border-color: #fff;
+        color: #fff;
+
+        &:hover {
+            background-color: #fff;
+        }
+    }
+
+    &--green-hover {
+        &:hover {
+            color: $accent-color;
+        }
+    }
+
+    &--black-hover {
+        &:hover {
+            color: #333b46;
+        }
+    }
 }

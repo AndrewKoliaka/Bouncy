@@ -1,0 +1,16 @@
+mixin radial-progress(title, value)
+    - var value = value || 0;
+
+    .radial-progress&attributes(attributes)
+        .radial-progress__area
+            .radial-progress__mask.radial-progress__mask--left
+                .radial-progress__fill(class='radial-progress__fill--' + (value > 50 ? 50 : value))
+            .radial-progress__mask.radial-progress__mask--right
+                .radial-progress__fill(class=value > 50 ? 'radial-progress__fill--' + (value - 50) : '')
+            .radial-progress__shape
+                .radial-progress__content
+                    span(data-value=value data-isLoaded='false').radial-progress__percent 0
+                    span.radial-progress__symbol %
+        .radial-progress__title= title
+
+        block

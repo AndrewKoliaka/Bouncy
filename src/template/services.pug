@@ -1,0 +1,81 @@
+include ../mixins/section-header
+include ../mixins/paginator
+include ../mixins/radial-progress
+
+section.section.services
+    .section__container
+        +section-header('Our services')
+        .services__wrapper
+            ul.services__paginations
+                +paginator('tools', true).services__paginator
+                +paginator('roll').services__paginator
+                +paginator('joystick').services__paginator
+                +paginator('socket').services__paginator
+            .services__slider
+                .services__slide
+                    .services__slide-title Graphic Design
+                    .services__left-container
+                        p.section__text At vero eos et accusamus et 
+                            b.section__text--bold.section__text--green iusto 
+                            | odio dignissimos 
+                            b.section__text--bold ducimus 
+                            | qui blanditiis praesentium voluptatum deleniti
+
+                        p.section__text.section__text--small.services__text quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, 
+                            b.section__text--bold.section__text--green similique sunt 
+                            | in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+                    .services__right-container
+                        +radial-progress('Branding', 80).services__progress
+                        +radial-progress('Web Design', 75).services__progress
+                        +radial-progress('UI/UX', 60).services__progress
+                
+                .services__slide
+                    .services__slide-title Web Development
+                    .services__left-container
+                        p.section__text At vero eos et accusamus et 
+                            b.section__text--bold.section__text--green iusto 
+                            | odio dignissimos 
+                            b.section__text--bold ducimus 
+                            | qui blanditiis praesentium voluptatum deleniti
+
+                        p.section__text.section__text--small.services__text quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, 
+                            b.section__text--bold.section__text--green similique sunt 
+                            | in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+                    .services__right-container
+                        +radial-progress('Responsive', 30).services__progress
+                        +radial-progress('Custom Applications', 60).services__progress
+                        +radial-progress('E-Commerce', 80).services__progress
+                
+                .services__slide
+                    .services__slide-title Marketing
+                    .services__left-container
+                        p.section__text At vero eos et accusamus et 
+                            b.section__text--bold.section__text--green iusto 
+                            | odio dignissimos 
+                            b.section__text--bold ducimus 
+                            | qui blanditiis praesentium voluptatum deleniti
+
+                        p.section__text.section__text--small.services__text quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, 
+                            b.section__text--bold.section__text--green similique sunt 
+                            | in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+                    .services__right-container
+                        +radial-progress('Digital Marketing', 75).services__progress
+                        +radial-progress('Social Media', 25).services__progress
+                        +radial-progress('Consulting', 80).services__progress
+                
+                .services__slide
+                    .services__slide-title Multi-Media
+                    .services__left-container
+                        p.section__text At vero eos et accusamus et 
+                            b.section__text--bold.section__text--green iusto 
+                            | odio dignissimos 
+                            b.section__text--bold ducimus 
+                            | qui blanditiis praesentium voluptatum deleniti
+
+                        p.section__text.section__text--small.services__text quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, 
+                            b.section__text--bold.section__text--green similique sunt 
+                            | in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+                    .services__right-container
+                        +radial-progress('Video', 10).services__progress
+                        +radial-progress('Photography', 75).services__progress
+                        +radial-progress('Webcasting', 50).services__progress
