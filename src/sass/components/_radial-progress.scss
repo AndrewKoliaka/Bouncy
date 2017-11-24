@@ -1,55 +1,55 @@
-$_progress-size: 116px;
-$_progress-padding: 4.5px;
-$_fill-color: $accent-color;
-$_duration: .6s;
-$_delay: .2s;
-
-// convert percent to degree corresponding to proportion
+    // convert percent to degree corresponding to proportion
 @function _percentToDegree($percent) {
     $base: 180deg;
     @return ($base * $percent) / 50;
 }
 
 // calculate animation duration based on percent of fill area
-@function _calcDuration($percent) {
-    @return ($_duration * $percent) / 50;
+@function _calcDuration($percent, $delay) {
+    @return ($delay * $percent) / 50;
 }
 
 .radial-progress {
+    $progress-size: 116px;
+    $progress-padding: 4.5px;
+    $fill-color: $accent-color;
+    $duration: .6s;
+    $delay: .2s;
+
     display: inline-block;
 
     &__area {
         position: relative;
-        width: $_progress-size;
-        height: $_progress-size;
+        width: $progress-size;
+        height: $progress-size;
         margin: 0 auto;
         border-radius: 50%;
     }
 
     &__mask {
         position: absolute;
-        height: $_progress-size;
-        width: $_progress-size;
+        height: $progress-size;
+        width: $progress-size;
         background-color: #047378;
         border-radius: 50%;
         overflow: hidden;
     
         &--left {
             .radial-progress__fill {
-                background-color: $_fill-color;
-                clip: rect(0, $_progress-size , $_progress-size, $_progress-size / 2);
-                animation-delay: $_delay;
+                background-color: $fill-color;
+                clip: rect(0, $progress-size , $progress-size, $progress-size / 2);
+                animation-delay: $delay;
                 animation-timing-function: ease-in;
             }
         }
 
         &--right {
-            clip: rect(0, $_progress-size, $_progress-size , $_progress-size / 2);
+            clip: rect(0, $progress-size, $progress-size , $progress-size / 2);
 
             .radial-progress__fill {
-                background-color: $_fill-color;
-                clip: rect(0, $_progress-size / 2, $_progress-size, 0);
-                animation-delay: $_duration + $_delay;
+                background-color: $fill-color;
+                clip: rect(0, $progress-size / 2, $progress-size, 0);
+                animation-delay: $duration + $delay;
                 animation-timing-function: ease-out;    
             }
         }
@@ -57,30 +57,30 @@ $_delay: .2s;
 
     &__fill {
         position: absolute;
-        width: $_progress-size;
-        height: $_progress-size;
+        width: $progress-size;
+        height: $progress-size;
         border-radius: 50%;
         animation-fill-mode: forwards;
         animation-play-state: paused;
 
         &--50 {
             animation-name: fill-50;
-            animation-duration: _calcDuration(50);
+            animation-duration: _calcDuration(50, $duration);
         }
 
         &--30 {
             animation-name: fill-30;
-            animation-duration: _calcDuration(30);
+            animation-duration: _calcDuration(30, $duration);
         }
 
         &--25 {
             animation-name: fill-25;
-            animation-duration: _calcDuration(25);
+            animation-duration: _calcDuration(25, $duration);
         }
 
         &--10 {
             animation-name: fill-10;
-            animation-duration: _calcDuration(10);
+            animation-duration: _calcDuration(10, $duration);
         }
     }
 
@@ -92,8 +92,8 @@ $_delay: .2s;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: $_progress-size - ($_progress-padding * 2);
-        height: $_progress-size - ($_progress-padding * 2);
+        width: $progress-size - ($progress-padding * 2);
+        height: $progress-size - ($progress-padding * 2);
         background-color: #f3f3f3;
         border-radius: 50%;
         color:  #81868e;

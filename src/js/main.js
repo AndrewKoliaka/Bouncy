@@ -3,6 +3,7 @@
 //= ../../node_modules/scrollreveal/dist/scrollreveal.min.js
 //= ../../node_modules/waypoints/lib/jquery.waypoints.min.js
 //= ../../node_modules/jquery.counterup/jquery.counterup.min.js
+//= ../../node_modules/isotope-layout/dist/isotope.pkgd.min.js
 
 var app = {};
 
@@ -23,6 +24,21 @@ $(document).ready(function () {
 
         app.detailsSlider.init();
         app.servicesSlider.init();
+
+        var mosaic = $('.portfolio__mosaic');
+
+        mosaic.isotope({
+            itemSelector: '.portfolio-work',
+            percentPosition: true,
+            // animationEngine : 'jquery'
+        });
+
+        $('.portfolio__nav-link').click(function(event){
+            event.preventDefault();
+            var selector = $(this).attr('data-filter');
+            mosaic.isotope({ filter: selector });
+            return false;
+          });
 
         // smooth transition effect between sections after click on link
         $("a").on('click', function (event) {

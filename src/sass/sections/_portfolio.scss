@@ -1,0 +1,69 @@
+.portfolio {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    background-color: $gray-bg-color;
+    text-align: center;
+
+    &__nav {
+        margin-top: 75px; 
+        margin-bottom: 73px;
+    }
+
+    &__nav-item {
+        margin-right: 40px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    &__nav-link {
+        position: relative;
+        color: #464646;
+        transition: $tr3s;
+
+        &:hover, &:focus {
+            &::after {
+                position: absolute;
+                bottom: -14px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 38px;
+                height: 2px;
+                background-color: #19bd9a;
+                content: "";
+            }
+        }
+    }
+
+    &__mosaic {
+        @include grid-container;
+        margin: 0 20px;
+    }
+
+    &__footer {
+        margin: 30px;
+        padding: 55px 0;
+        background: url('../img/bg_4.jpg') no-repeat center/cover;
+    }
+
+    &__text {
+        @extend .section__text, .section__text--big, .section__text--white;
+    }
+
+    &__start-btn {
+        @extend .btn, .btn--invert, .btn--green-hover;
+        margin-top: 30px;
+    }
+}
+
+// isotope specific styles
+.isotope-item {
+    z-index: 2;
+  }
+  
+.isotope-hidden.isotope-item {
+    pointer-events: none;
+    z-index: 1;
+}

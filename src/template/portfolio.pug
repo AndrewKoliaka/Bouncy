@@ -1,0 +1,154 @@
+include ../mixins/section-header
+include ../mixins/icon
+
+section.section.portfolio
+    .section__container
+        +section-header('THE PORTFOLIO')
+        nav.portfolio__nav
+            ul.portfolio__nav-list
+                li.portfolio__nav-item
+                    a(href="#" data-filter="*").portfolio__nav-link All portfolio-works
+                li.portfolio__nav-item
+                    a(href="#" data-filter=".portfolio-work--print").portfolio__nav-link Print
+                li.portfolio__nav-item
+                    a(href="#" data-filter=".portfolio-work--identity").portfolio__nav-link Identity
+                li.portfolio__nav-item
+                    a(href="#" data-filter=".portfolio-work--branding").portfolio__nav-link Branding
+                li.portfolio__nav-item
+                    a(href="#" data-filter=".portfolio-work--web").portfolio__nav-link Web
+                li.portfolio__nav-item
+                    a(href="#" data-filter=".portfolio-work--html").portfolio__nav-link HTML
+                li.portfolio__nav-item
+                    a(href="#" data-filter=".portfolio-work--wordpress").portfolio__nav-link Wordpress
+        .portfolio__mosaic
+
+            //- first row
+            .portfolio-work.portfolio-work--big.portfolio-work--branding
+                .portfolio-work__info
+                    .portfolio-work__title title here
+                    p.portfolio-work__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                    .portfolio-work__links
+                        a(href="#" title="like").portfolio-work__link
+                            +icon('heart').portfolio-work__icon
+                        a(href="#" title="share").portfolio-work__link
+                            +icon('link').portfolio-work__icon
+
+            .portfolio-work.portfolio-work--medium.portfolio-work--print
+                .portfolio-work__info
+                    .portfolio-work__title title here
+                    p.portfolio-work__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                    .portfolio-work__links
+                        a(href="#" title="like").portfolio-work__link
+                            +icon('heart').portfolio-work__icon
+                        a(href="#" title="share").portfolio-work__link
+                            +icon('link').portfolio-work__icon
+
+            .portfolio-work.portfolio-work--small.portfolio-work--web.portfolio-work--wordpress
+                .portfolio-work__info
+                    .portfolio-work__title title here
+                    p.portfolio-work__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                    .portfolio-work__links
+                        a(href="#" title="like").portfolio-work__link
+                            +icon('heart').portfolio-work__icon
+                        a(href="#" title="share").portfolio-work__link
+                            +icon('link').portfolio-work__icon
+
+            .portfolio-work.portfolio-work--big.portfolio-work--print.portfolio-work--identity
+                .portfolio-work__info
+                    .portfolio-work__title title here
+                    p.portfolio-work__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                    .portfolio-work__links
+                        a(href="#" title="like").portfolio-work__link
+                            +icon('heart').portfolio-work__icon
+                        a(href="#" title="share").portfolio-work__link
+                            +icon('link').portfolio-work__icon
+
+            //- second row
+            .portfolio-work.portfolio-work--big.portfolio-work--identity
+                .portfolio-work__info
+                    .portfolio-work__title title here
+                    p.portfolio-work__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                    .portfolio-work__links
+                        a(href="#" title="like").portfolio-work__link
+                            +icon('heart').portfolio-work__icon
+                        a(href="#" title="share").portfolio-work__link
+                            +icon('link').portfolio-work__icon
+
+            .portfolio-work.portfolio-work--big.portfolio-work--branding.portfolio-work--wordpress
+                .portfolio-work__info
+                    .portfolio-work__title title here
+                    p.portfolio-work__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                    .portfolio-work__links
+                        a(href="#" title="like").portfolio-work__link
+                            +icon('heart').portfolio-work__icon
+                        a(href="#" title="share").portfolio-work__link
+                            +icon('link').portfolio-work__icon
+
+            .portfolio-work.portfolio-work--big.portfolio-work--branding
+                .portfolio-work__info
+                    .portfolio-work__title title here
+                    p.portfolio-work__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                    .portfolio-work__links
+                        a(href="#" title="like").portfolio-work__link
+                            +icon('heart').portfolio-work__icon
+                        a(href="#" title="share").portfolio-work__link
+                            +icon('link').portfolio-work__icon
+
+            .portfolio-work.portfolio-work--medium.portfolio-work--branding
+                .portfolio-work__info
+                    .portfolio-work__title title here
+                    p.portfolio-work__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                    .portfolio-work__links
+                        a(href="#" title="like").portfolio-work__link
+                            +icon('heart').portfolio-work__icon
+                        a(href="#" title="share").portfolio-work__link
+                            +icon('link').portfolio-work__icon
+
+            //- third row
+            .portfolio-work.portfolio-work--big.portfolio-work--identity
+                .portfolio-work__info
+                    .portfolio-work__title title here
+                    p.portfolio-work__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                    .portfolio-work__links
+                        a(href="#" title="like").portfolio-work__link
+                            +icon('heart').portfolio-work__icon
+                        a(href="#" title="share").portfolio-work__link
+                            +icon('link').portfolio-work__icon
+
+            .portfolio-work.portfolio-work--medium.portfolio-work--print.portfolio-work--web
+                .portfolio-work__info
+                    .portfolio-work__title title here
+                    p.portfolio-work__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                    .portfolio-work__links
+                        a(href="#" title="like").portfolio-work__link
+                            +icon('heart').portfolio-work__icon
+                        a(href="#" title="share").portfolio-work__link
+                            +icon('link').portfolio-work__icon
+
+            .portfolio-work.portfolio-work--medium.portfolio-work--wordpress
+                .portfolio-work__info
+                    .portfolio-work__title title here
+                    p.portfolio-work__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                    .portfolio-work__links
+                        a(href="#" title="like").portfolio-work__link
+                            +icon('heart').portfolio-work__icon
+                        a(href="#" title="share").portfolio-work__link
+                            +icon('link').portfolio-work__icon
+                            
+            .portfolio-work.portfolio-work--small.portfolio-work--web.portfolio-work--html
+                .portfolio-work__info
+                    .portfolio-work__title title here
+                    p.portfolio-work__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                    .portfolio-work__links
+                        a(href="#" title="like").portfolio-work__link
+                            +icon('heart').portfolio-work__icon
+                        a(href="#" title="share").portfolio-work__link
+                            +icon('link').portfolio-work__icon
+        
+        footer.portfolio__footer
+            p.portfolio__text At vero eos et 
+                b accusamus 
+                | et iusto odio 
+                b dignissimos 
+                | ducimus qui blanditiis 
+            a(href="#").portfolio__start-btn Start Project

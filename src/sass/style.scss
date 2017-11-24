@@ -1,24 +1,33 @@
+@charset 'utf-8';
+
 // vendors
-@import "../../node_modules/normalize.css/normalize";
-@import "../../node_modules/slick-carousel/slick/slick.scss";
-@import "../../node_modules/bourbon-neat/core/neat";
+@import '../../node_modules/normalize.css/normalize';
+@import '../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../node_modules/bourbon-neat/core/neat';
 
-// utils
-@import "utils/variables";
-@import "utils/mixins";
-@import "utils/helpers";
-@import "utils/fonts";
+// abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/helpers';
 
-// reusable blocks
-@import "blocks/section";
-@import "blocks/btn";
-@import "blocks/paginator";
-@import "blocks/radial-progress";
+// base
+@import 'base/base';
+@import 'base/fonts';
+
+// layout
+@import 'layout/section';
+
+// components
+@import 'components/btn';
+@import 'components/paginator';
+@import 'components/radial-progress';
+@import 'components/portfolio-work';
 
 // sections
-@import "main";
-@import "header";
-@import "about";
-@import "details";
-@import "projects";
-@import "services";
+@import 'sections/header';
+@import 'sections/about';
+@import 'sections/details';
+@import 'sections/projects';
+@import 'sections/services';
+@import 'sections/impressed';
+@import 'sections/portfolio';

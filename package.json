@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "bourbon-neat": "^2.1.0",
+    "isotope-layout": "^3.0.4",
     "jquery": "^3.2.1",
     "jquery.counterup": "^2.1.0",
     "scrollreveal": "^3.3.6",

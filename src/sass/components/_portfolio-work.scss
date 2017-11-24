@@ -1,0 +1,162 @@
+.portfolio-work {
+
+    $grid: (
+        columns: 12,
+        gutter: 10px
+    );
+
+    @include grid-column(3, $grid);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &:hover {
+        .portfolio-work__info {
+            opacity: 1;
+        }
+    }
+
+    &:nth-of-type(1) {
+        background-image: url('../img/work1.jpg');
+    }
+
+    &:nth-of-type(2) {
+        background-image: url('../img/work2.jpg');
+    }
+
+    &:nth-of-type(3) {
+        background-image: url('../img/work3.jpg');
+    }
+
+    &:nth-of-type(4) {
+        background-image: url('../img/work4.jpg');
+    }
+
+    &:nth-of-type(5) {
+        background-image: url('../img/work5.jpg');
+    }
+
+    &:nth-of-type(6) {
+        background-image: url('../img/work6.jpg');
+    }
+
+    &:nth-of-type(7) {
+        background-image: url('../img/work7.jpg');
+    }
+
+    &:nth-of-type(8) {
+        background-image: url('../img/work8.jpg');
+    }
+
+    &:nth-of-type(9) {
+        background-image: url('../img/work9.jpg');
+    }
+
+    &:nth-of-type(10) {
+        background-image: url('../img/work10.jpg');
+    }
+
+    &:nth-of-type(11) {
+        background-image: url('../img/work11.jpg');
+    }
+
+    &:nth-of-type(12) {
+        background-image: url('../img/work12.jpg');
+    }
+
+    &--small {
+        height: 240px;
+
+        .portfolio-work__info {
+            padding-top: 15%;
+        }
+    }
+
+    &--medium {
+        height: 290px;
+
+        .portfolio-work__info {
+            padding-top: 20%;
+        }
+    }
+
+    &--big {
+        height: 340px;
+    }
+
+    &__info {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 30% 30px 10px 40px;
+        background-color: rgba(0, 0, 0, .8);
+        text-align: left;
+        opacity: 0;
+        transition: $tr3s;
+    }
+
+    &__title {
+        position: relative;
+        margin-bottom: 20%;
+        font-family: $ffSourceSansPro-Light;
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        letter-spacing: .25rem;
+        color: $accent-color;
+
+        &::after {
+            position: absolute;
+            bottom: -18px;
+            left: 0;
+            height: 1px;
+            width: 23px;
+            background-color: $accent-color;
+            content: "";
+        }
+    }
+
+    &__text {
+        color:  #b2b3b3;
+        font-size: 0.75rem;
+        line-height: 1.667;
+    }
+
+    &__links {
+        display: flex;
+        margin-top: 10%;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 7px;
+        width: 29px;
+        height: 29px;
+        border-radius: 50%;
+        background-color: hsl(0, 0, 0);
+        transition: $tr3s;
+
+        &:hover {
+            background-color: #fff;
+
+            .portfolio-work__icon {
+                fill: hsl(0, 0, 0);
+            }
+        }
+    }
+
+    &__icon {
+        width: 15px;
+        height: 15px;
+        fill: #fff;
+    }
+}

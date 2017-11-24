@@ -21,14 +21,14 @@
             }
 
             &:after {
-                content: "";
                 @include center-absolute(36px, 1px);
+                content: "";
                 background-color: #fff;
             }
 
             &:before {
-                content: "";
                 @include center-absolute(1px, 36px);
+                content: "";
                 background-color: #fff;
             }
 
