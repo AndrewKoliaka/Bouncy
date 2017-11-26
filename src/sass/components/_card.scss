@@ -1,0 +1,56 @@
+.card {
+    $card-height: 272px;
+    $card-width: 287px;
+
+    width: $card-width;
+    height: $card-height;
+    background-color:  #fff;
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, .05);
+
+    &__header {
+        height: 52%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(0, 0, 0);
+    }
+
+    &__icon {
+        width: 50px;
+        height: 50px;
+        fill: #fff;
+    }
+
+    &__title {
+        @extend .section__text;
+        text-transform: uppercase;
+        color: #464646;
+    }
+
+    &__content {
+        height: 48%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__text-block {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    &__text, &__link {
+        @extend .section__text, .section__text--small;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        transition: $tr3s;
+
+        &:hover {
+            color: hsl(0, 0, 0);
+        }
+    }
+}

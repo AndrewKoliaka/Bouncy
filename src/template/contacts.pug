@@ -1,0 +1,37 @@
+include ../mixins/section-header
+include ../mixins/icon
+
+section.section.contacts#contacts-section
+    .section__container
+        +section-header('Contact Us')
+        .contacts__cards-container
+            .card
+                header.card__header
+                    +icon('email').card__icon
+                .card__content
+                    .card__title email
+                    .card__text-block
+                        a(href="#" mailto="hello@codecafe.com").card__link hello@codecafe.com
+                        a(href="#" mailto="Personal@codecafe.com").card__link Personal@codecafe.com
+            
+            .card
+                header.card__header
+                    +icon('point').card__icon
+                .card__content
+                    .card__title OUR OFFICE
+                    .card__text-block
+                        .card__text 240 Bhatikhana, 8200 Barisal
+                        .card__text Bangladesh
+
+            .card
+                header.card__header
+                    +icon('phone-call').card__icon
+                .card__content
+                    .card__title PHONE
+                    .card__text-block
+                        a(href="#" tel="+00 11 66 99 66 44").card__link +00 11 66 99 66 44
+                        a(href="#" tel="11 99 66 44 065").card__link 11 99 66 44 065
+
+            
+                
+

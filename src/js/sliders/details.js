@@ -8,7 +8,7 @@ app.detailsSlider = (function () {
     return {
         init: function () {
 
-            slider.slick({fade: true, arrows: false, autoplaySpeed: 5000, speed: 500});
+            slider.slick({fade: true, arrows: false, autoplaySpeed: 5000, speed: 150});
 
             $(document).on('scroll', function() {
                 if(app.utils.isScrolledIntoView(slider)) {
@@ -23,12 +23,8 @@ app.detailsSlider = (function () {
                 app.utils.makePaginatorActive(pagination, slideIndex);
             });
 
-            slider.on('beforeChange', function (event, slick, prevIndex) {
-                var currentIndex = prevIndex === slick.slideCount - 1
-                    ? 0
-                    : prevIndex + 1;
-
-                app.utils.makePaginatorActive(pagination, currentIndex);
+            slider.on('afterChange', function (event, slick, index) {
+                app.utils.makePaginatorActive(pagination, index);
             });
         }
     }

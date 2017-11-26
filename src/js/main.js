@@ -10,6 +10,9 @@ var app = {};
 //= utils.js
 //= sliders/details.js
 //= sliders/services.js
+//= sliders/team.js
+//= sliders/testimonials.js
+//= sliders/blog.js
 
 $(document).ready(function () {
 
@@ -24,21 +27,27 @@ $(document).ready(function () {
 
         app.detailsSlider.init();
         app.servicesSlider.init();
+        app.teamSlider.init();
+        app.testimonialsSlider.init();
+        app.blogSlider.init();
 
         var mosaic = $('.portfolio__mosaic');
 
         mosaic.isotope({
             itemSelector: '.portfolio-work',
-            percentPosition: true,
-            // animationEngine : 'jquery'
+            percentPosition: true
         });
 
-        $('.portfolio__nav-link').click(function(event){
+        $('.portfolio__nav-link').on('click', function(event){
             event.preventDefault();
             var selector = $(this).attr('data-filter');
             mosaic.isotope({ filter: selector });
             return false;
-          });
+        });
+
+        $('.map__overlay').on('click', function() {
+            $(this).hide();
+        });
 
         // smooth transition effect between sections after click on link
         $("a").on('click', function (event) {

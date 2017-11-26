@@ -53,8 +53,12 @@
     }
 
     &__start-btn {
-        @extend .btn, .btn--invert, .btn--green-hover;
+        @extend .btn, .btn--invert;
         margin-top: 30px;
+
+        &:hover {
+            color: $accent-color;
+        }
     }
 }
 

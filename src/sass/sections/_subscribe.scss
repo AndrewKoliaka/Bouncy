@@ -1,0 +1,47 @@
+.subscribe {
+    padding-top: 80px;
+    padding-bottom: 100px;
+    text-align: center;
+    background: url('../img/bg_7.jpg') no-repeat center/cover;
+
+    &__heading {
+        @extend .section__title;
+        color: #fff;
+    }
+
+    &__heading-text {
+        @extend .section__text, .section__text--small;
+    }
+
+    &__form {
+        margin-top: 58px;
+    }
+
+    &__email-input {
+        padding: 10px 10px 10px 22px;
+        background-color: transparent;
+        border: 1px solid #81868e;
+        min-width: 356px;
+        color: #fff;
+
+        @include placeholder() {
+            color:  #cfd3d4;
+        }
+    }
+
+    &__submit {
+        width: 151px;
+        padding: 10px 0;
+        margin-left: 9px;
+        background-color: $accent-color;
+        border: none;
+        font: 400 .875rem $ffOpenSans-Regular;
+        color: #fff;
+        text-transform: uppercase;
+        transition: $tr3s;
+
+        &:hover {
+            background-color: darken($accent-color, 10%);
+        }
+    }
+}

@@ -1,0 +1,9 @@
+mixin progress(title, percents)
+    .progress&attributes(attributes)
+        .progress__row
+            span.progress__title= title
+            span.progress__value
+                span.progress__percents= percents  
+                span.progress__symbol  %
+        .progress__shape
+            .progress__fill(class="progress__fill--" + percents)

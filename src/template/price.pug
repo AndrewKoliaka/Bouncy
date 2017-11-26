@@ -1,0 +1,52 @@
+include ../mixins/section-header
+include ../mixins/icon
+
+section.section.price
+    .section__container
+        +section-header('Our Price', true)
+        .price__container
+            .price__card
+                .price__card-wrapper
+                    .price__back
+                        ul.price__services
+                            li.price__services-item Full Branding
+                            li.price__services-item Project Management
+                        a(href="#").price__start Lets start
+                            +icon('angle-down').price__icon
+                    .price__front
+                        .price__type base
+                        .price__cost-banner
+                            .price__value $ 40
+                            .price__period Per Month
+            .price__card
+                .price__card-wrapper
+                    .price__back
+                        ul.price__services
+                            li.price__services-item Full Branding
+                            li.price__services-item Project Management
+                            li.price__services-item Unlimited Revisions
+                            li.price__services-item 24/7 h Service
+                        a(href="#").price__start Lets start
+                            +icon('angle-down').price__icon
+                    .price__front
+                        .price__type Premium
+                        .price__cost-banner
+                            .price__value $ 60
+                            .price__period Per Month
+            .price__card
+               .price__card-wrapper
+                    .price__back
+                        ul.price__services
+                            li.price__services-item Full Branding
+                            li.price__services-item Project Management
+                            li.price__services-item Unlimited Revisions
+                            li.price__services-item 24/7 h Service
+                            li.price__services-item Free Domain
+                            li.price__services-item Free Hosting
+                        a(href="#").price__start Lets start
+                            +icon('angle-down').price__icon
+                    .price__front
+                        .price__type EXCLUSIVE
+                        .price__cost-banner
+                            .price__value $ 80
+                            .price__period Per Month

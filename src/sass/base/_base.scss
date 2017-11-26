@@ -29,15 +29,17 @@ ul {
 }
 
 h1 {
-    font-family: $ffSourceSansPro-Light;
-    font-weight: 300;
+    font: 300 2.188rem $ffSourceSansPro-Light;
     text-transform: uppercase;
-    color:  #ffffff;
-    font-size: 2.188rem;
-    letter-spacing: 0.438rem;
+    color:  #fff;
+    letter-spacing: .438rem;
 }
 
 h1, h2, p, figure, ul, li {
     margin: 0;
     padding: 0;
+}
+
+input, textarea {
+    font: 400 .875rem $ffOpenSans-Regular;
 }

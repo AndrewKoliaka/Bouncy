@@ -60,11 +60,9 @@
     }
 
     &__category {
-        font-family: $ffSourceSansPro-Light;
-        font-weight: 300;
+        font: 700 1.25rem $ffSourceSansPro-Light;
         text-transform: uppercase;
         color:  #fff;
-        font-size: 1.25rem;
         letter-spacing: 0.25rem;
     }
 
@@ -77,5 +75,13 @@
         justify-content: space-between;
         align-items: center;
         padding: 38px 0;
+    }
+
+    &__submit {
+        @extend .btn, .btn--invert;
+
+        &:hover {
+            color: $accent-color;
+        }
     }
 }

@@ -14,11 +14,9 @@
 
     &__title {
         margin-bottom: 35px;
-        font-family: $ffSourceSansPro-Light;
+        font: 300 1.25rem $ffSourceSansPro-Light;
         color: $heading-color;
-        font-size: 1.25rem;
         line-height: 1;
-        font-weight: 300;
         text-transform: uppercase;
         letter-spacing: .25rem;
     }

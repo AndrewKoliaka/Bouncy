@@ -1,0 +1,102 @@
+.price {
+    $card-height: 300px;
+    $card-width: 230px;
+
+    padding-top: 80px;
+    padding-bottom: 100px;
+    background-color: $gray-bg-color;
+    text-align: center;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+    }
+
+    &__card {
+        position: relative;
+        height: $card-height;
+        width: $card-width;
+        overflow: hidden;
+
+        &:nth-of-type(2) {
+            margin: 0 70px;
+        }
+    }
+
+    &__card-wrapper {
+        position: absolute;
+        bottom: 0;
+        background-color: #fff;
+        transition: $tr3s;
+
+        &:hover {
+            bottom: -$card-height;
+        }
+    }
+
+    &__type {
+        padding: 25px 0;
+        background-color: $accent-color;
+        font: 700 1.25rem $ffOpenSans-Bold;
+        text-transform: uppercase;
+        color:  #fff;
+        line-height: 1;
+    }
+
+    &__cost-banner {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &__value {
+        font: 900 2.642rem $ffSourceSansPro-Black;
+        color:  #1fbba6;
+    }
+
+    &__period {
+        color:  #81868e;
+        font-size: 1.25rem;
+    }
+
+    &__services {
+        padding: 27px 32px;
+        text-align: left;
+    }
+
+    &__services-item {
+        @extend .section__text, .section__text--small;
+        line-height: 2.143;
+        text-align: left;
+    }
+
+    &__start {
+        display: flex;
+        justify-content: center;
+        padding: 28px 0;
+        margin: 0;
+        background-color: $accent-color;
+        color:  #fff;
+        font-size: 1rem;
+    }
+
+    &__icon {
+        margin-left: 10px;
+        fill: #fff;
+        width: 18px;
+        height: 18px;
+        transform: rotate(-90deg);
+    }
+
+    &__front, &__back {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: $card-width;
+        height: $card-height;
+    }
+}

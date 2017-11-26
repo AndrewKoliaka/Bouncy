@@ -1,0 +1,73 @@
+.progress {
+    display: inline-block;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+
+    &__title, &__value {
+        font: 300 1rem $ffSourceSansPro-Light;
+        text-transform: uppercase;
+        color: $text-color;
+        letter-spacing: 0.1rem;
+    }
+
+    &__shape {
+        padding: 0;
+        width: 330px;
+        height: 4px;
+        background-color:  #e1e4e9;
+    }
+
+    &__fill {
+        background-color: $accent-color;
+        height: 100%;
+        width: 0;
+        animation-delay: .2s;
+        animation-duration: .6s;
+        animation-play-state: paused;
+        animation-fill-mode: forwards;
+
+        &--90 {
+            animation-name: progress-90;
+        }
+
+        &--80 {
+            animation-name: progress-80;
+        }
+
+        &--75 {
+            animation-name: progress-75;
+        }
+
+        &--65 {
+            animation-name: progress-65;
+        }
+    }
+}
+
+@keyframes progress-90 {
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes progress-80 {
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes progress-75 {
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes progress-65 {
+    100% {
+        width: 65%;
+    }
+}

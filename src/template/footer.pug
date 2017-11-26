@@ -1,1 +1,24 @@
+include ../mixins/icon
+
+footer.footer
+    a(href="#").footer__logo
+        img(src="../img/footer_logo.png", alt="bouncy")
+    .footer__copyright Copyright 2015. All rights Reserved
+    ul.footer__socials
+        li.footer__social-item
+            a(href="#" title='facebook').footer__social-link.footer__social-link--facebook
+                +icon('facebook').footer__social-icon
+        li.footer__social-item
+            a(href="#" title='twitter').footer__social-link.footer__social-link--twitter
+                +icon('twitter').footer__social-icon
+        li.footer__social-item
+            a(href="#" title='linkedin').footer__social-link.footer__social-link--linkedin
+                +icon('linkedin').footer__social-icon
+        li.footer__social-item
+            a(href="#" title='instagram').footer__social-link.footer__social-link--instagram
+                +icon('instagram').footer__social-icon
+        li.footer__social-item
+            a(href="#" title='vimeo').footer__social-link.footer__social-link--vimeo
+                +icon('vimeo').footer__social-icon
+                
 script(src="js/main.js")

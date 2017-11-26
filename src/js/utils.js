@@ -18,6 +18,9 @@ app.utils = (function () {
                 var target = $(el);
 
                 if(!target.data('isLoaded')) {
+                    target.text(function() {
+                        return $(this).data('value');
+                    });
                     target.counterUp({time: 800, offset: 200});
                     target.data('isLoaded', true)
                 }
