@@ -4,15 +4,32 @@
     text-align: center;
     background-color: $gray-bg-color;
 
+    @include respond-to(medium){
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+
 
     &__wrapper {
         margin-top: 60px;
+
+        @include respond-to(large){
+            margin-top: 40px;
+        }
     }
 
     &__paginations {
         @include grid-shift(1);
         @include grid-column(1);
         padding-left: 5px;
+
+        @include respond-to(large){
+            @include grid-shift(0);
+            @include grid-column(18);
+            display: flex;
+            justify-content: center;
+            padding-left: 0;
+        }
     }
 
     &__paginator {
@@ -21,41 +38,107 @@
         &:last-of-type {
             margin-bottom: 0;
         }
+
+        @include respond-to(large){
+            margin-bottom: 0;
+            margin-right: 15px;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
     }
 
     &__slider {
         @include grid-shift(1);
         @include grid-column(16);
         padding-left: 40px;
+
+        @include respond-to(large){
+            padding-left: 0;
+        }
     }
 
     &__slide {
         @include grid-collapse;
         text-align: left;
+
+        @include respond-to(large){
+            margin-top: 30px;
+        }
     }
 
     &__left-container {
         @include grid-column(7);
         padding-right: 20px;
+
+        @include respond-to(x-large){
+            @include grid-column(6);
+        }
+
+        @include respond-to(large){
+            @include grid-column(18);
+            padding-right: 0;
+        }
     }
 
     &__right-container {
         @include grid-shift(1);
         @include grid-column(9);
         text-align: right;
+
+        @include respond-to(x-large){
+            @include grid-shift(0);
+            @include grid-column(10);
+        }
+
+        @include respond-to(large){
+            @include grid-column(18);
+            display: flex;
+            justify-content: center;
+            padding-top: 40px;
+        }
+
+        @include respond-to(small){
+            flex-direction: column;
+            padding-top: 20px;
+        }
     }
 
     &__slide-title {
         margin-bottom: 25px;
         color:  #464646;
         font-size: 1.25rem;
+
+        @include respond-to(medium){
+            text-align: center;
+        }
     }
 
     &__text {
         margin-top: 30px;
+
+        @include respond-to(large){
+            margin-top: 10px;
+        }
     }
 
-    &__progress:nth-of-type(2) {
-        margin: 0 43px;
+    &__progress {
+        &:nth-of-type(2) {
+            margin: 0 43px;
+
+            @include respond-to(medium){
+                margin: 0 20px;
+            }
+
+            @include respond-to(small){
+                margin: 0;
+                margin-top: 20px;
+            }
+        }
+
+        @include respond-to(small){
+            margin-top: 20px;
+        }
     }
 }

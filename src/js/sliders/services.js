@@ -15,7 +15,20 @@ app.servicesSlider = (function () {
     return {
         init: function () {
 
-            slider.slick({fade: true, arrows: false, autoplaySpeed: 10000, speed: 500});
+            slider.slick({
+                fade: true, 
+                arrows: false, 
+                autoplaySpeed: 10000, 
+                speed: 500,
+                responsive: [
+                    {
+                        breakpoint: 750,
+                        settings: {
+                            fade: false
+                        }
+                    }
+                ]
+            });
 
             $(document).on('scroll', function () {
                 if (app.utils.isScrolledIntoView(slider)) {

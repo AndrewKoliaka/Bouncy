@@ -1,46 +1,59 @@
 include ../mixins/section-header
 include ../mixins/progress
+include ../mixins/control
 
 section.section.team#team-section
     .section__container
         +section-header('the team')
-        .team__slider
-            .team__slide
-                .team__slide-wrapper
-                    figure.team__img-container
-                        img(src="../img/person1.jpg", alt="Abdullah Noman").team__img
-                    .team__content
-                        .team__header
-                            .team__name Abdullah Noman
-                            .team__position Creative Director, Code Cafe
-                        p.team__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                        +progress('BRANDING', 80).team__progress
-                        +progress('Web Design', 65).team__progress
-                        +progress('User Interface', 75).team__progress
-            .team__slide
-                .team__slide-wrapper
-                    figure.team__img-container
-                        img(src="../img/person2.jpg", alt="Abdullah Noman").team__img
-                    .team__content
-                        .team__header
-                            .team__name Abdullah Noman
-                            .team__position Creative Director, Code Cafe
-                        p.team__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                        +progress('Print', 90).team__progress
-                        +progress('HTML', 65).team__progress
-                        +progress('Magic', 65).team__progress
-            .team__slide
-                .team__slide-wrapper
-                    figure.team__img-container
-                        img(src="../img/person3.jpg", alt="Abdullah Noman").team__img
-                    .team__content
-                        .team__header
-                            .team__name Abdullah Noman
-                            .team__position Creative Director, Code Cafe
-                        p.team__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                        +progress('Cooking', 65).team__progress
-                        +progress('Web Development', 90).team__progress
-                        +progress('C/C++', 75).team__progress
+        .team__slider-wrapper
+            +control('prev').team__prev
+            +control('next').team__next
+            .team__slider
+                .team__slide
+                    .team__slide-wrapper
+                        figure.team__img-container
+                            img(src="../img/person1.jpg", alt="Abdullah Noman").team__img
+                        .team__content
+                            .team__header
+                                .team__name Abdullah Noman
+                                .team__position Creative Director, Code Cafe
+                            p.team__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                            .team__progress-wrapper
+                                +progress('BRANDING', 80).team__progress
+                            .team__progress-wrapper
+                                +progress('Web Design', 65).team__progress
+                            .team__progress-wrapper
+                                +progress('User Interface', 75).team__progress
+                .team__slide
+                    .team__slide-wrapper
+                        figure.team__img-container
+                            img(src="../img/person2.jpg", alt="Abdullah Noman").team__img
+                        .team__content
+                            .team__header
+                                .team__name Abdullah Noman
+                                .team__position Creative Director, Code Cafe
+                            p.team__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                            .team__progress-wrapper
+                                +progress('Print', 90).team__progress
+                            .team__progress-wrapper
+                                +progress('HTML', 65).team__progress
+                            .team__progress-wrapper
+                                +progress('Magic', 65).team__progress
+                .team__slide
+                    .team__slide-wrapper
+                        figure.team__img-container
+                            img(src="../img/person3.jpg", alt="Abdullah Noman").team__img
+                        .team__content
+                            .team__header
+                                .team__name Abdullah Noman
+                                .team__position Creative Director, Code Cafe
+                            p.team__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                            .team__progress-wrapper
+                                +progress('Cooking', 65).team__progress
+                            .team__progress-wrapper
+                                +progress('Web Development', 90).team__progress
+                            .team__progress-wrapper
+                                +progress('C/C++', 75).team__progress
     footer.team__footer
         p.team__footer-text Already Loved Us? Let’s talk!
         a(href="#contacts-section").team__btn Contact Us

@@ -4,9 +4,19 @@
     background-color: $gray-bg-color;
     text-align: center;
 
+    @include respond-to(medium){
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+
     &__nav {
         margin-top: 75px; 
         margin-bottom: 73px;
+
+        @include respond-to(medium){
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
     }
 
     &__nav-item {
@@ -14,6 +24,11 @@
 
         &:last-of-type {
             margin-right: 0;
+        }
+
+        @include respond-to(medium){
+            margin-top: 30px;
+            margin-right: 20px;
         }
     }
 
@@ -23,6 +38,8 @@
         transition: $tr3s;
 
         &:hover, &:focus {
+            outline: none;
+
             &::after {
                 position: absolute;
                 bottom: -14px;
@@ -39,6 +56,7 @@
 
     &__mosaic {
         @include grid-container;
+        position: relative;
         margin: 0 20px;
     }
 
@@ -46,10 +64,19 @@
         margin: 30px;
         padding: 55px 0;
         background: url('../img/bg_4.jpg') no-repeat center/cover;
+
+        @include respond-to(medium){
+            padding: 30px 10px;
+            margin-bottom: 0;
+        }
     }
 
     &__text {
         @extend .section__text, .section__text--big, .section__text--white;
+
+        @include respond-to(medium){
+            font-size: 1rem;
+        }
     }
 
     &__start-btn {
@@ -58,6 +85,10 @@
 
         &:hover {
             color: $accent-color;
+        }
+
+        @include respond-to(medium){
+            margin-top: 20px;
         }
     }
 }

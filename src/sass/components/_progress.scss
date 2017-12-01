@@ -1,4 +1,7 @@
 .progress {
+    $progress-width: 330px;
+    $progress-width-sm: 200px;
+
     display: inline-block;
 
     &__row {
@@ -16,9 +19,13 @@
 
     &__shape {
         padding: 0;
-        width: 330px;
+        width: $progress-width;
         height: 4px;
         background-color:  #e1e4e9;
+
+        @include respond-to(small){
+            width: $progress-width-sm;
+        }
     }
 
     &__fill {

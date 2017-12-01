@@ -8,7 +8,21 @@ app.detailsSlider = (function () {
     return {
         init: function () {
 
-            slider.slick({fade: true, arrows: false, autoplaySpeed: 5000, speed: 150});
+            slider.slick({
+                fade: true, 
+                arrows: false, 
+                autoplaySpeed: 5000, 
+                speed: 150,
+                responsive: [
+                    {
+                        breakpoint: 750,
+                        settings: {
+                            fade: false,
+                            speed: 500
+                        }
+                    }
+                ]
+            });
 
             $(document).on('scroll', function() {
                 if(app.utils.isScrolledIntoView(slider)) {

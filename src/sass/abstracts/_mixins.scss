@@ -1,21 +1,19 @@
 @mixin respond-to($media) {
-    @if $media == wide {
-        @media only screen and (min-width: $small) {
+    $breakpoint: map-get($map: $breakpoints, $key: $media);
+
+    @if $breakpoint {
+        $query: if(
+            type-of($breakpoint) == 'string',
+            unquote($breakpoint),
+            inspect($breakpoint)
+        );
+    
+        @media #{$query} {
             @content;
         }
-    }
-    @else if $media == tablet {                                           // SM ( < 1024px )
-        @media only screen and (max-width: $large - 1) {
-            @content;
-        }
-    } @else if $media == phone-lend {                                       // XS ( < 768px )
-        @media only screen and (max-width: $small - 1) {
-            @content;
-        }
-    } @else if $media == phone {                                            // ( < 568px )
-        @media only screen and (max-width: $x-small - 1) {
-            @content;
-        }
+    } @else {
+        @error 'No value found for `#{$breakpoint}`. '
+             + 'Please make sure it is defined in `$breakpoints` map.';
     }
 }
 

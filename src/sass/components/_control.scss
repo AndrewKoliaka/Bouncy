@@ -1,0 +1,45 @@
+.control {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
+    width: 40px;
+    height: 40px;
+    background-color: rgba($color: #dbdbdb, $alpha: .8);
+    border-radius: 50%;
+    transition: $tr3s;
+
+    @include respond-to(medium){
+        display: flex;
+    }
+
+    &:hover, &:focus {
+        background-color: darken(#dbdbdb, 10%);
+    }
+
+    &--next {
+        right: 0px;
+
+        .control__icon {
+            transform: rotate(-90deg);
+        }
+    }
+
+    &--prev {
+        left: 0px;
+
+        .control__icon {
+            transform: rotate(90deg);
+        }
+    }
+
+    &__icon {
+        fill: $text-color;
+        width: 30px;
+        height: 30px;
+    }
+}

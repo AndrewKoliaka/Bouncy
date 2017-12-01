@@ -1,8 +1,10 @@
-// Media width
-$phone: 320px;
-$small: 750px;
-$large: 1000px;
-$wide: 1100px;
+$breakpoints: (
+    'x-small': (max-width: 320px),
+    'small': (max-width: 480px - 1),
+    'medium': (max-width: 750px - 1),
+    'large': (max-width: 1000px - 1),
+    'x-large': (max-width: 1200px)
+);
 
 //Fonts
 $ffRoboto-Light: 'Roboto Light', sans-serif;

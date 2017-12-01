@@ -1,0 +1,29 @@
+include ../../mixins/icon
+
+header.header.section#header-section
+    .header__container
+        nav.header__nav
+            a(href='#' title='bouncy').header__logo
+                img(src='img/logo.png', alt='bouncy')
+            a(href='#').header__toggle-btn &#9776;
+            ul.header__list
+                li.header__item
+                    a(href='#').header__link Hello
+                li.header__item
+                    a(href='#about-section').header__link About
+                li.header__item
+                    a(href='#services-section').header__link Services
+                li.header__item
+                    a(href='#portfolio-section').header__link Portfolio
+                li.header__item
+                    a(href='#team-section').header__link Team
+                li.header__item
+                    a(href='#blog-section').header__link Blog
+                li.header__item
+                    a(href='#contacts-section').header__link Contact
+        h1.header__title We are code cafe
+        p.section__text.header__text Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae autem modi eaque 
+            br
+            | suscipit saepe repudiandae?
+        a(href='#about-section').header__scroll-btn
+            +icon('angle-down').header__scroll-icon

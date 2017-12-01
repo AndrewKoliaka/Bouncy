@@ -1,5 +1,17 @@
 .portfolio-work {
 
+    $sizes: (
+        big: 340px,
+        medium: 290px,
+        small: 240px
+    );
+
+    $lg-sizes: (
+        big: 300px,
+        medium: 250px,
+        small: 200px
+    );
+
     $grid: (
         columns: 12,
         gutter: 10px
@@ -15,6 +27,10 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include respond-to(medium){
+        @include grid-column(6, $grid);
+    }
 
     &:hover {
         .portfolio-work__info {
@@ -71,7 +87,11 @@
     }
 
     &--small {
-        height: 240px;
+        height: map-get($sizes, small);
+
+        @include respond-to(large){
+            height: map-get($lg-sizes, small);
+        }
 
         .portfolio-work__info {
             padding-top: 15%;
@@ -79,7 +99,11 @@
     }
 
     &--medium {
-        height: 290px;
+        height: map-get($sizes, medium);
+
+        @include respond-to(large){
+            height: map-get($lg-sizes, medium);
+        }
 
         .portfolio-work__info {
             padding-top: 20%;
@@ -87,7 +111,22 @@
     }
 
     &--big {
-        height: 340px;
+        height: map-get($sizes, big);
+
+        @include respond-to(large){
+            height: map-get($lg-sizes, big);
+        }
+    }
+
+    &--small, &--big, &--medium {
+
+        @include respond-to(small){
+            height: 100px;
+        }
+
+        .portfolio-work__info {
+            padding-top: 10px;
+        }
     }
 
     &__info {
@@ -101,6 +140,18 @@
         text-align: left;
         opacity: 0;
         transition: $tr3s;
+
+        @include respond-to(large){
+            padding: 15% 15px 10px 15px;
+        }
+
+        @include respond-to(medium){
+            padding: 20px 15px;
+        }
+
+        @include respond-to(small){
+            padding: 10px;
+        }
     }
 
     &__title {
@@ -120,6 +171,23 @@
             width: 23px;
             background-color: $accent-color;
             content: "";
+
+            @include respond-to(small){
+                display: none;
+            }
+        }
+
+        @include respond-to(medium){
+            margin-bottom: 40px;
+        }
+
+        @include respond-to(small){
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-size: 1rem;
+            margin-bottom: 10px;
         }
     }
 
@@ -127,11 +195,24 @@
         color:  #b2b3b3;
         font-size: 0.75rem;
         line-height: 1.667;
+        text-overflow: ellipsis;
+
+        @include respond-to(small){
+            display: none;
+        }
     }
 
     &__links {
         display: flex;
         margin-top: 10%;
+
+        @include respond-to(medium){
+            margin-top: 10px;
+        }
+
+        @include respond-to(small){
+            display: none;
+        }
     }
 
     &__link {

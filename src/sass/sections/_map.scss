@@ -1,6 +1,12 @@
 .map {
+    $map-height: 496px;
+
     position: relative;
-    height: 496px;
+    height: $map-height;
+
+    @include respond-to(small){
+        height: 300px;
+    }
 
     &__frame {
         height: 100%;

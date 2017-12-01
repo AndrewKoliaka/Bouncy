@@ -2,6 +2,12 @@
     padding-top: 80px;
     padding-bottom: 100px;
     background: url('../img/bg_6.jpg') no-repeat center/cover;
+
+    @include respond-to(medium){
+        padding-top: 40px;
+        padding-bottom: 50px;
+        text-align: center;
+    }
     
     &__heading {
         @extend .section__title;
@@ -13,6 +19,10 @@
         color: #b2b3b3;
     }
 
+    &__slider-wrapper {
+        position: relative;
+    }
+
     &__slider {
         display: flex;
     }
@@ -20,6 +30,21 @@
     &__slide {
         @include grid-shift(1);
         @include grid-column(8);
+
+        @include respond-to(large){
+            @include grid-column(12);
+        }
+
+        @include respond-to(medium){
+            @include grid-shift(2);
+            @include grid-column(14);
+            text-align: left;
+        }
+
+        @include respond-to(small){
+            @include grid-shift(3);
+            @include grid-column(12);
+        }
     }
 
     &__title {
@@ -27,6 +52,10 @@
         color:  #e1e4e9;
         font-size: 1.25rem;
         font-weight: 400;
+
+        @include respond-to(medium){
+            margin-top: 40px;
+        }
     }
 
     &__author {
@@ -47,6 +76,19 @@
     &__text {
         @extend .section__text, .section__text--small;
         margin-top: 51px;
+
+        @include respond-to(medium){
+            margin-top: 30px;
+        }
+    }
+
+    &__next, &__prev {
+        background-color: transparent;
+        border: 1px solid $text-color;
+
+        &:hover, &:focus {
+            background-color: darken(#fff, 20%);
+        }
     }
 
     &__read-btn {
@@ -54,6 +96,10 @@
         color:  #b2b3b3;
         font-size: 1rem;
         transition: $tr3s;
+
+        @include respond-to(medium){
+            margin-top: 20px;
+        }
 
         &:hover {
             color: #fff;

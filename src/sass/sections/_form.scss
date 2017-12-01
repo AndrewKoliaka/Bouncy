@@ -2,11 +2,19 @@
     padding-top: 80px;
     padding-bottom: 130px;
 
+    @include respond-to(medium){
+        padding: 40px 0;
+    }
+
     &__row {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         text-align: center;
+
+        @include respond-to(medium){
+            flex-direction: column;
+        }
     }
 
     &__input {
@@ -15,8 +23,17 @@
         border: 1px solid #d8dce0;
         color: $text-color;
 
+        @include respond-to(medium){
+            flex: 0 0 auto;
+            width: 100%;
+        }
+
         &:nth-of-type(2) {
             margin: 0 40px;
+
+            @include respond-to(medium){
+                margin: 20px 0;
+            }
         }
 
         @include placeholder() {
@@ -31,6 +48,10 @@
         padding: 10px;
         border: 1px solid #d8dce0;
         color: $text-color;
+
+        @include respond-to(medium){
+            margin-top: 20px;
+        }
     }
 
     &__submit {
@@ -46,6 +67,11 @@
 
         &:hover {
             background-color: darken($accent-color, 10%);
+        }
+
+        @include respond-to(medium){
+            margin-top: 20px;
+            padding: 9.5px 0;
         }
     }
 }

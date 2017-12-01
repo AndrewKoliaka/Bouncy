@@ -16,6 +16,8 @@ var app = {};
 
 $(document).ready(function () {
 
+        var scrollTopBtn = $('.scroll-top');
+
         // fade in effect on scrolling
         var sr = ScrollReveal({
             delay: 300,
@@ -24,6 +26,8 @@ $(document).ready(function () {
 
         sr.reveal('.section__container');
         sr.reveal('.projects');
+        sr.reveal('.map');
+        sr.reveal('.footer');
 
         app.detailsSlider.init();
         app.servicesSlider.init();
@@ -45,8 +49,32 @@ $(document).ready(function () {
             return false;
         });
 
+        $('.portfolio__nav-link').first().focus();
+
         $('.map__overlay').on('click', function() {
             $(this).hide();
+        });
+
+        $('.header__link').on('click', function() {
+            $('.header__list').slideToggle();
+        });
+
+        $('.header__toggle-btn').on('click', function() {
+            $('.header__list').slideToggle();
+        });
+
+        $(document).on('scroll', function() {
+            if($(this).scrollTop() > 700) {
+                scrollTopBtn.fadeIn();
+            } else {
+                scrollTopBtn.fadeOut();
+            }
+        });
+
+        $(window).on('resize', function() {
+            if($(this).outerWidth() > 1000) {
+                $('.header__list').removeAttr('style');
+            }
         });
 
         // smooth transition effect between sections after click on link

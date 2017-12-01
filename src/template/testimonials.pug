@@ -1,27 +1,32 @@
 include ../mixins/section-header
+include ../mixins/control
 
 section.section.testimonials
     .section__container
         +section-header('testimonials')
-        .testimonials__slider
-            .testimonials__slide
-                .testimonials__slide-wrapper
-                    .testimonials__avatar
-                    .testimonials__content
-                        p.testimonials__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.
-                        .testimonials__author Partho
-                        .testimonials__position founder, artways bd
-            .testimonials__slide
-                .testimonials__slide-wrapper
-                    .testimonials__avatar
-                    .testimonials__content
-                        p.testimonials__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.
-                        .testimonials__author Partho
-                        .testimonials__position founder, artways bd
-            .testimonials__slide
-                .testimonials__slide-wrapper
-                    .testimonials__avatar
-                    .testimonials__content
-                        p.testimonials__text At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.
-                        .testimonials__author Partho
-                        .testimonials__position founder, artways bd
+        .testimonials__slider-wrapper
+            +control('prev').testimonials__prev
+            +control('next').testimonials__next
+            .testimonials__slider
+                .testimonials__slide
+                    .testimonials__slide-wrapper
+                        .testimonials__avatar
+                        .testimonials__content
+                            .testimonials__text-container
+                                p.testimonials__comment At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.
+                            .testimonials__author Partho
+                            .testimonials__position founder, artways bd
+                .testimonials__slide
+                    .testimonials__slide-wrapper
+                        .testimonials__avatar
+                        .testimonials__content
+                            p.testimonials__comment At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.
+                            .testimonials__author Partho
+                            .testimonials__position founder, artways bd
+                .testimonials__slide
+                    .testimonials__slide-wrapper
+                        .testimonials__avatar
+                        .testimonials__content
+                            p.testimonials__comment At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.
+                            .testimonials__author Partho
+                            .testimonials__position founder, artways bd

@@ -13,7 +13,21 @@ app.teamSlider = (function () {
     return {
         init: function () {
 
-            slider.slick({arrows: false, autoplaySpeed: 5000, speed: 500, dots: true, dotsClass: 'team__pagination'});
+            slider.slick({
+                arrows: false, 
+                autoplaySpeed: 5000, 
+                speed: 500, 
+                dots: true, 
+                dotsClass: 'team__pagination',
+                responsive: [
+                    {
+                        breakpoint: 750,
+                        settings: {
+                            dots: false
+                        }
+                    }
+                ]
+            });
 
             $(document).on('scroll', function () {
                 if (app.utils.isScrolledIntoView(slider)) {
@@ -24,6 +38,14 @@ app.teamSlider = (function () {
 
             slider.on('afterChange', function(event, slick, index) {
                 animate(index);
+            });
+
+            $('.team__next').on('click', function() {
+                slider.slick('slickNext');
+            });
+
+            $('.team__prev').on('click', function() {
+                slider.slick('slickPrev');
             });
         }
     }

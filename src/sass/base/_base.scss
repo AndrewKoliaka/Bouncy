@@ -28,11 +28,10 @@ ul {
     }
 }
 
-h1 {
-    font: 300 2.188rem $ffSourceSansPro-Light;
-    text-transform: uppercase;
-    color:  #fff;
-    letter-spacing: .438rem;
+br {
+    @include respond-to(medium){
+        display: none;
+    }
 }
 
 h1, h2, p, figure, ul, li {

@@ -1,16 +1,27 @@
 .price {
     $card-height: 300px;
     $card-width: 230px;
+    $card-height-sm: 170px;
 
     padding-top: 80px;
     padding-bottom: 100px;
     background-color: $gray-bg-color;
     text-align: center;
 
+    @include respond-to(medium){
+        padding-top: 40px;
+        padding-bottom: 50px;
+    }
+
     &__container {
         display: flex;
         justify-content: center;
         margin-top: 60px;
+
+        @include respond-to(medium){
+            flex-direction: column;
+            margin-top: 30px;
+        }
     }
 
     &__card {
@@ -19,19 +30,39 @@
         width: $card-width;
         overflow: hidden;
 
+        @include respond-to(medium){
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            height: $card-height-sm;
+        }
+
         &:nth-of-type(2) {
             margin: 0 70px;
+
+            @include respond-to(large){
+                margin: 0 20px;
+            }
+
+            @include respond-to(medium){
+                margin: 30px auto;
+            }
         }
     }
 
     &__card-wrapper {
         position: absolute;
+        width: 100%;
         bottom: 0;
         background-color: #fff;
         transition: $tr3s;
 
         &:hover {
             bottom: -$card-height;
+
+            @include respond-to(medium){
+                bottom: -$card-height-sm;
+            }
         }
     }
 
@@ -42,6 +73,10 @@
         text-transform: uppercase;
         color:  #fff;
         line-height: 1;
+
+        @include respond-to(medium){
+            padding: 10px 0;
+        }
     }
 
     &__cost-banner {
@@ -50,7 +85,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
     }
 
     &__value {
@@ -64,12 +98,20 @@
     }
 
     &__services {
-        padding: 27px 32px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 30px;
         text-align: left;
+        max-height: 60%;
+
+        @include respond-to(medium){
+            flex-wrap: wrap;
+        }
     }
 
     &__services-item {
         @extend .section__text, .section__text--small;
+        display: block;
         line-height: 2.143;
         text-align: left;
     }
@@ -82,6 +124,10 @@
         background-color: $accent-color;
         color:  #fff;
         font-size: 1rem;
+
+        @include respond-to(medium){
+            padding: 10px 0;
+        }
     }
 
     &__icon {
@@ -96,7 +142,10 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: $card-width;
         height: $card-height;
+
+        @include respond-to(medium){
+            height: $card-height-sm;
+        }
     }
 }

@@ -2,21 +2,46 @@
     padding-top: 80px;
     text-align: center;   
 
+    @include respond-to(medium){
+        padding-top: 40px;
+    }
+
     &__slide-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-left: 70px;
         padding-right: 118px;
+        
+        @include respond-to(medium){
+            flex-direction: column;
+            padding: 0;
+        }
     }
 
     &__slider {
         margin-top: 60px;
+
+        @include respond-to(medium){
+            margin-top: 30px;
+        }
+    }
+
+    &__slider-wrapper {
+        position: relative;
     }
 
     &__img-container {
-        width: 285px;
+        width: auto;
         height: 363px;
+
+        @include respond-to(medium){
+            height: 300px;
+        }
+
+        @include respond-to(small){
+            height: 200px;
+        }
     }
 
     &__img {
@@ -27,6 +52,16 @@
     &__content {
         text-align: right;
         max-width: 40%;
+
+        @include respond-to(large){
+            max-width: 48%;
+        }
+
+        @include respond-to(medium){
+            margin-top: 30px;
+            max-width: 100%;
+            text-align: center;
+        }
     }
 
     &__header {
@@ -42,6 +77,10 @@
             width: 4px;
             background-color: $accent-color;
             content: '';
+
+            @include respond-to(medium){
+                display: none;
+            }
         }
     }
 
@@ -58,16 +97,30 @@
         color:  #81868e;
         line-height: 1;
         letter-spacing: .088rem;
+
+        @include respond-to(small){
+            padding: 0 20%;
+        }
     }
 
     &__text {
         @extend .section__text, .section__text--small;
         margin-top: 30px;
         margin-bottom: 15px;
+
+        @include respond-to(medium){
+            margin: 15px auto;
+            max-width: 60%;
+        }
     }
 
     &__progress {
         margin-top: 35px;
+
+        @include respond-to(medium){
+            margin-top: 20px;
+        }
+        
     }
 
     &__pagination {
@@ -75,14 +128,39 @@
         margin-top: 62px;
     }
 
+    &__next {
+        right: 5%;
+
+        @include respond-to(small){
+            right: 5px;
+        }
+    }
+
+    &__prev {
+        left: 0;
+
+        @include respond-to(small){
+            left: 0;
+        }
+    }
+
     &__footer {
         margin-top: 100px;
         padding: 57px 0;
         background: url('../img/bg_5.jpg') no-repeat center/cover;
+
+        @include respond-to(medium){
+            margin-top: 50px;
+            padding: 30px 0;
+        }
     }
 
     &__footer-text {
         @extend .section__text, .section__text--big, .section__text--white;
+
+        @include respond-to(medium){
+            font-size: 1rem;
+        }
     }
 
     &__btn {
@@ -91,6 +169,10 @@
 
         &:hover {
             color: #333b46;
+        }
+
+        @include respond-to(medium){
+            margin-top: 20px;
         }
     }
 }

@@ -1,0 +1,5 @@
+include icon
+
+mixin control(direction)
+    .control(class='control--' + direction)&attributes(attributes)
+        +icon('angle-down').control__icon
