@@ -56,7 +56,9 @@ $(document).ready(function () {
         });
 
         $('.header__link').on('click', function() {
-            $('.header__list').slideToggle();
+            if($('.header__toggle-btn').is(':visible')) {
+                $('.header__list').slideToggle();    
+            }
         });
 
         $('.header__toggle-btn').on('click', function() {
