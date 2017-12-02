@@ -1,6 +1,5 @@
 .about {
     &__container {
-        @extend .section__container;
         background: url('../img/ipad.png') no-repeat right 170px center;
 
         @include respond-to(large){

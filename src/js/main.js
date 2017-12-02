@@ -49,8 +49,6 @@ $(document).ready(function () {
             return false;
         });
 
-        $('.portfolio__nav-link').first().focus();
-
         $('.map__overlay').on('click', function() {
             $(this).hide();
         });
